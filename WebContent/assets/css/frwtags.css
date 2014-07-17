@@ -1,0 +1,77 @@
+
+/* System Defaults */
+* {
+       font-size:   14px; 
+       color:       inherit;  
+       line-height: 21px; 
+       font-weight: normal; 
+       white-space: normal;
+}
+
+body {
+	overflow: hidden;
+	background-color: #ffffff;
+}
+
+/* **************** */
+/* Components Style */
+/* **************** */
+
+#modal { display: none; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; z-index: 9999; background-color: rgba(0,0,0,0.7)}
+.header-sys { background-color: #E0E0E0; position: fixed; left: 0px; right: 0px; top: 0px; height: 50px; }
+.content-sys { position: absolute; left: 0px; right: 0px; top: 50px; bottom: 40px; margin: 4px; overflow: visible; }
+.footer-sys { background-color: #E0E0E0; position: fixed; left: 0px; right: 0px; bottom: 0px; height: 40px; overflow-y: auto; }
+
+
+
+.window { position: absolute !important; outline: none; background: white; border: solid #b6b6b6 4px; display: inline-block; min-width: 160px; min-height: 200px; }
+.window .ui-resizable-handle.ui-resizable-se { background: url("../img/ui-icons_222222_256x240.png") -65px -225px; width: 16px; height: 16px; right: -4px; bottom: -4px; }
+
+.window .header { outline: none; height: 25px; cursor: move; padding-left: 10px; padding-top: 5px; color: #1f86c4; overflow: hidden; }
+.window .header .title { font-size: 14px; font-weight: 400; float: left; white-space: nowrap; }
+.window .header .header-button { float: right; cursor: pointer; width: 16px; height: 16px; margin: 0px 3px; }
+.window .header .help-button     { background: bottom url("../img/icon.window-help.png") no-repeat !important;  }
+.window .header .minimize-button { background: bottom url("../img/icon.window-minimize.png") no-repeat !important;  }
+.window .header .maximize-button { background: bottom url("../img/icon.window-maximize.png") no-repeat !important;  }
+.window .header .close-button    { background: bottom url("../img/icon.window-close.png") no-repeat !important;  }
+
+.window .body { position: absolute; left: 5px; top: 35px; right: 0px; bottom: 40px; overflow-y: auto; overflow-x: hidden; }
+.window .body::-webkit-scrollbar { overflow: visible; width: 8px; background: #e7e7e7; }
+.window .body::-webkit-scrollbar-thumb { background: #1f86c4; width: 12px; }
+
+.window .body .FormLabel { display: block; }
+
+.window .button-bar { position: absolute; height: 40px; left: 0px; right: 0px; bottom: 0px; padding-right: 20px; overflow: hidden; text-align: right;}
+
+.window-minimized {
+	position: relative !important;
+	top: 0px !important;
+	left: 0px !important;
+	width: 80px !important;
+	height: 30px !important;
+	margin-top: 4px !important;
+	margin-left: 4px !important;
+	min-width: 80px !important;
+	min-height: 30px !important;
+	border: 1px solid #c6c6c6 !important;
+	border-radius: 3px !important;
+	background-color: #f4f4f4 !important;
+}
+
+.window-minimized .header{ cursor: pointer !important; }
+
+.window-minimized .body, 
+.window-minimized .button-bar,
+.window-minimized .header .header-button,
+.window-minimized .ui-resizable-handle
+{ display: none !important; }
+
+.window-maximized {
+	position: absolute !important;
+	top: 0px !important;
+	left: 0px !important;
+	margin: -4px !important;
+	width: 100% !important;
+	height: 100% !important;
+	z-index: 999 !important;
+}
